@@ -4,45 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c82cc9bf-170a-4496-8aed-029f1dac9033" name="Changes" comment="" />
+    <list default="true" id="0e953d18-3ed2-4c74-b734-313369b19fc9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Assignment-1-AI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Assignment-1-AI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wumpus/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/wumpus/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wumpus/link.py" beforeDir="false" afterPath="$PROJECT_DIR$/wumpus/link.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
+  &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2uUvvDj9tEPJHAHvS9k8iLI9I9V" />
+  <component name="ProjectId" id="2uXXPq3jJ0ylIUiaQ7hSh2EXbRf" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.game.executor": "Run",
-    "Python.link.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.game.executor&quot;: &quot;Run&quot;,
+    &quot;Python.link.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;test&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\nelso\Assignment-1-AI\wumpus" />
-    </key>
-  </component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -54,14 +54,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c82cc9bf-170a-4496-8aed-029f1dac9033" name="Changes" comment="" />
-      <created>1742316195944</created>
+      <changelist id="0e953d18-3ed2-4c74-b734-313369b19fc9" name="Changes" comment="" />
+      <created>1742395872813</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1742316195944</updated>
-      <workItem from="1742316196951" duration="70000" />
-      <workItem from="1742316280967" duration="56000" />
-      <workItem from="1742316347855" duration="15569000" />
+      <updated>1742395872813</updated>
+      <workItem from="1742395873686" duration="743000" />
+      <workItem from="1742419212046" duration="2122000" />
+      <workItem from="1742426119979" duration="4096000" />
     </task>
     <servers />
   </component>
@@ -69,7 +69,8 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Assignment_1_AI$game.coverage" NAME="game Coverage Results" MODIFIED="1742331957038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wumpus" />
-    <SUITE FILE_PATH="coverage/Assignment_1_AI$link.coverage" NAME="link Coverage Results" MODIFIED="1742331349844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wumpus" />
+    <SUITE FILE_PATH="coverage/Assignment_1_AI$config.coverage" NAME="config Coverage Results" MODIFIED="1742420936107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wumpus" />
+    <SUITE FILE_PATH="coverage/Assignment_1_AI$game.coverage" NAME="game Coverage Results" MODIFIED="1742431297636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wumpus" />
+    <SUITE FILE_PATH="coverage/Assignment_1_AI$link.coverage" NAME="link Coverage Results" MODIFIED="1742421024720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wumpus" />
   </component>
 </project>

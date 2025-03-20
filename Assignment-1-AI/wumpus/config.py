@@ -10,13 +10,13 @@
 myId = 12345678
 
 # Dimensions in terms of the numbers of rows and columns
-worldLength = 20
-worldBreadth = 20
+worldLength = 6
+worldBreadth = 6
 
 # Features
-numberOfWumpus = 4
-numberOfPits = 6
-numberOfGold = 6
+numberOfWumpus = 2
+numberOfPits = 4
+numberOfGold = 2
 
 # Do we show graphics or not?
 headless = False

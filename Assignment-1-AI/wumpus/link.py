@@ -28,6 +28,7 @@ class Link():
 
     def makeMove(self):
         # calculate the distances between your position and each gold position, use the smallest value available
+        allWumpus = self.gameWorld.getWumpusLocation()
         def calculate_distance(pos1, pos2):
             return math.sqrt((pos1.x - pos2.x) ** 2 + (pos1.y - pos2.y) ** 2)
 
@@ -39,8 +40,7 @@ class Link():
         if not self.path:
             if len(allGold) > 0:
                 nextGold = min(allGold, key=lambda gold: calculate_distance(myPosition, gold))
-                allWumpus = self.gameWorld.getWumpusLocation()
-                self.path = self.a_star(myPosition, nextGold, allWumpus)
+                self.path = self.a_star(myPosition, nextGold, allWumpus, allPits)
 
                 if not self.path:
                     return random.choice(self.moves)
@@ -51,7 +51,7 @@ class Link():
 
         return next_move
 
-    def a_star(self, start, goal, allWumpus):
+    def a_star(self, start, goal, allWumpus, allPits):
 
         # Initialize the open and closed sets
         open_set = {} #store nodes to be evaluated
@@ -101,6 +101,12 @@ class Link():
                 if not self.is_valid_position(neighbor_pose):
                     continue
 
+                if any(pit.x == neighbor_pose.x and pit.y == neighbor_pose.y for pit in allPits):
+                    continue
+
+                if any(wumpus.x == neighbor_pose.x and wumpus.y == neighbor_pose.y for wumpus in allWumpus):
+                    continue
+
                 # Calculate g_score for this neighbor
                 tentative_g_score = current['g_score'] + 1
 
@@ -109,7 +115,7 @@ class Link():
                     'pose': neighbor_pose,
                     'g_score': tentative_g_score,
                     'h_score': self.heuristic(neighbor_pose, goal),
-                    'f_score': tentative_g_score + self.heuristic(neighbor_pose, goal) + 1 * self.calculateTotalPenalty(neighbor_pose, allWumpus),
+                    'f_score': tentative_g_score + self.heuristic(neighbor_pose, goal) + self.calculateTotalPenalty(neighbor_pose, allWumpus),
                     'parent': current,
                     'direction': direction,
                 }
@@ -136,10 +142,10 @@ class Link():
         return abs(a.x - b.x) + abs(a.y - b.y)
 
     def penaltyHeuristic(self, a, b):
-        max_penalty = 55  # Adjust this value as needed
+        max_penalty = 9  # Adjust this value as needed
         terror = abs(a.x - b.x) + abs(a.y - b.y)  # Manhattan distance
 
-        if terror == 0:
+        if terror == 0 or terror == 1 :
             return max_penalty  # Maximum penalty when overlapping
         else:
             return max_penalty / terror  # Higher penalty for closer distances
