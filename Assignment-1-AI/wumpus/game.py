@@ -32,7 +32,7 @@ def main():
 
     # Show initial state
     display.update()
-    time.sleep(1)
+    time.sleep(0.2)
     # Now run...
     while not(gameWorld.isEnded()):
         gameWorld.updateLink(player.makeMove())
@@ -40,7 +40,7 @@ def main():
         # Uncomment this for a printout of world state every step
         # utils.printGameState(gameWorld)
         display.update()
-        time.sleep(1)
+        time.sleep(0.2)
 
     # Display message at end
     if gameWorld.status == utils.State.WON:

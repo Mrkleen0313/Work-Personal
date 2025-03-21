@@ -37,18 +37,16 @@ class Link():
         myPosition = self.gameWorld.getLinkLocation()
         allPits = self.gameWorld.getPitsLocation()
 
-        if not self.path:
-            if len(allGold) > 0:
-                nextGold = min(allGold, key=lambda gold: calculate_distance(myPosition, gold))
-                self.path = self.a_star(myPosition, nextGold, allWumpus, allPits)
+        if len(allGold) > 0:
+            nextGold = min(allGold, key=lambda gold: calculate_distance(myPosition, gold))
+            self.path = self.a_star(myPosition, nextGold, allWumpus, allPits)
 
-                if not self.path:
-                    return random.choice(self.moves)
-            else:
+            if not self.path:
                 return random.choice(self.moves)
+        else:
+            return random.choice(self.moves)
 
         next_move = self.path.pop(0)
-
         return next_move
 
     def a_star(self, start, goal, allWumpus, allPits):
@@ -142,18 +140,22 @@ class Link():
         return abs(a.x - b.x) + abs(a.y - b.y)
 
     def penaltyHeuristic(self, a, b):
-        max_penalty = 9  # Adjust this value as needed
-        terror = abs(a.x - b.x) + abs(a.y - b.y)  # Manhattan distance
+        max_penalty = 8  # Adjust this value as needed
+        terrorX = abs(a.x - b.x)
+        terrorY = abs(a.y - b.y)  # Manhattan distance
 
-        if terror == 0 or terror == 1 :
-            return max_penalty  # Maximum penalty when overlapping
-        else:
-            return max_penalty / terror  # Higher penalty for closer distances
+        radius = 1
+        # if terrorX <= radius or terrorY <= radius: # terrorX == 1 or terrorX == 2 or terrorY == 0 or terrorY == 1 or terrorY == 2 :
+        #     return max_penalty  # Maximum penalty when overlapping
+        # else:
+        return max_penalty / ((terrorX + terrorY) ** 1.5) # terrorX ** 2 + max_penalty / terrorY ** 2  # Higher penalty for closer distances
 
     def calculateTotalPenalty(self, pose, allWumpus):
         total_penalty = 0
         for wumpus in allWumpus:
             total_penalty += self.penaltyHeuristic(pose, wumpus)
+
+        # print(f"{pose.x}, {pose.y} : {total_penalty}")
         return total_penalty
 
     def get_neighbor_position(self, pose, direction):
